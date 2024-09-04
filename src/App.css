@@ -18,7 +18,7 @@
 
 p {
     font-size: 80px;
-    transition: red, yellow, green 2s infinite;
+    text-shadow: 1px 1px 10px black;
 }
 
 .btnNegativo {
@@ -89,6 +89,7 @@ p {
 .btnZerar button:hover {
     background-color: #ffd35a;
 }
+
 
 .Tittle{
     color: aqua;

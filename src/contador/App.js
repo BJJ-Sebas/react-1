@@ -2,7 +2,18 @@ import { useState } from "react"
 import "../App.css"
 export default function Contador() {
 
-  const [numero, setNumero] = useState(0)
+  const [numero, setNumero] = useState(0);
+
+  const corNumero = () => {
+    if (numero > 0) {
+      return "greenyellow";
+    } else if (numero < 0) {
+      return "crimson";
+    } else {
+      return "black";
+    }
+  };
+
 
   function maismil() {
     setNumero(numero + 1000)
@@ -50,14 +61,14 @@ export default function Contador() {
     setNumero(numero - numero)
   }
 
-
+  
   return (
     <section className="conteiner">
       <section className="Tittle">
       <h1>Contador</h1>
       </section>
-      <section className="numero">
-      <p>{numero}</p>
+      <section className="numero" style={{ color: corNumero() }}>
+        <p>{numero}</p>
       </section>
       <section className="btnPositivo">
         <button onClick={maismil}>+1000</button>
